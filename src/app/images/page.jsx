@@ -29,13 +29,20 @@ export default function page() {
   }
   return (
     <div className="w-full h-screen">
-      <div className="flex gap-4 w-full h-full p-4">
-        <div className="flex-1 flex gap-6">
+      <div className="flex gap-4 w-full h-full p-4 max-md:p-1 max-sm:px-4">
+        <div className="flex-1 flex max-md:flex-col gap-6">
           <Link
             href="https://stsci-opo.org/STScI-01J80MW64ABY9QBQJPVGVQXQ9W.png"
             target="_blank"
-            className="rounded-xl bg-black w-3/4 h-full overflow-hidden relative "
+            className="rounded-xl bg-transparent w-3/4 max-md:w-full max-md:h-max h-full overflow-hidden relative "
           >
+            <div className="bg-[#171717] md:absolute max-md:rounded-2xl rounded-tl-xl rounded-br-2xl top-0 left-0 lg:w-max z-10 p-2">
+                <div className="bg-black rounded-2xl text-slate-400 font-bold text-sm xl:text-base p-4">
+                    <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#f8b500] to-[#fceabb] text-nowrap text-center">
+                        Galaxy GS-NDG-9422 (NIRCam Image)
+                    </div>
+                </div>
+            </div>
             <Image
               src="/images/pic1.png"
               height={2000}
@@ -44,19 +51,12 @@ export default function page() {
               className="overflow-hidden rounded-xl"
             ></Image>
 
-            <div className="bg-[#171717] absolute rounded-tl-xl rounded-br-2xl top-0 left-0 lg:w-max z-10 p-2">
-                <div className="bg-black rounded-2xl text-slate-400 font-bold text-sm xl:text-base p-4">
-                    <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#f8b500] to-[#fceabb] text-nowrap">
-                        Galaxy GS-NDG-9422 (NIRCam Image)
-                    </div>
-                </div>
-            </div>
           </Link>
 
           {/* right     */}
 
           <div
-            className={`rounded-xl w-1/4 flex flex-col gap-4 p-4 bg-black hover:w-[40%] transition-all duration-500 text-slate-500 overflow-scroll no-scrollbar`}
+            className={`rounded-xl w-1/4 max-md:w-full flex flex-col gap-4 p-4 bg-black md:hover:w-[40%] transition-all duration-500 text-slate-500 overflow-scroll no-scrollbar`}
           >
             <div className="flex self-center gap-4 xl:gap-6 flex-wrap text-sm lg;text-base font-sans">
 
