@@ -41,9 +41,9 @@ export default function ActiveImage() {
             target="_blank"
             className="rounded-xl bg-transparent w-[70%] max-md:w-full max-md:h-max h-full overflow-hidden relative "
           >
-            <div className="bg-gradient-to-r from-[#001c3d] to-[#12081c] md:absolute max-md:rounded-2xl rounded-tl-xl rounded-br-2xl top-0 left-0 lg:w-max z-10 p-2">
-                <div className="bg-black rounded-2xl text-slate font-bold text-sm xl:text-base p-4">
-                    <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#f8b500] to-[#fceabb] text-nowrap text-center">
+            <div className="bg-gradient-to-r from-[#001c3d] to-[#071525] md:absolute max-md:rounded-2xl rounded-tl-xl rounded-br-2xl top-0 left-0 lg:w-max z-10 p-2">
+                <div className="bg-black md:rounded-tl-2xl md:rounded-br-2xl max-md:rounded-2xl text-slate font-bold text-sm xl:text-base p-4">
+                    <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#0077f8] to-[#67adf1] text-center">
                         {img.details.description}
                     </div>
                 </div>
@@ -67,7 +67,7 @@ export default function ActiveImage() {
 
               <div 
               onClick={handleOverview}
-              className={`cursor-pointer text-2xl max-md:text-lg font-bold ${showOverview && " bg-gradient-to-r bg-clip-text from-orange-400 via-yellow-600 to-yellow-200 text-transparent " }`}>
+              className={`cursor-pointer text-2xl max-md:text-lg font-bold ${showOverview && " bg-gradient-to-r bg-clip-text from-[#0077f8] to-[#67adf1] text-transparent " }`}>
                 Overview
               </div>
               {/* <div onClick={handleFacts}
