@@ -14,7 +14,7 @@ export default function HomePage() {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "https://api.jwstapi.com/all/type/jpg?page=1&perPage=40",
+      url: "https://api.jwstapi.com/all/type/jpg?page=1&perPage=20",
       headers: { "X-API-KEY": "e33bc7e8-2249-4e67-bea0-59e3b02373bc" },
     };
 
@@ -44,7 +44,7 @@ export default function HomePage() {
     <div className="flex flex-wrap gap-6 px-4 py-2 md:py-4">
       {data.map((image) => (
         <Link
-          href="/images"
+            href='/images'
           className="text-white"
           key={image.id}
           onClick={() => {
