@@ -12,6 +12,15 @@ module.exports = {
         foreground: "var(--foreground)",
         color1:"#1f74ff",
       },
+      animation:{
+        'infinite-rotate':'infinite-rotate 9s linear infinite',
+      },
+      keyframes:{
+        'infinite-rotate':{
+          from:{transform:'rotate(0deg)'},
+          to:{transform:'rotate(360deg)'},
+        },
+      },
     },
   },
   plugins: [],

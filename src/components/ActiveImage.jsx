@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import Instruments from "./Instruments";
+import { GrFormNext, GrNext } from "react-icons/gr";
+import { GrFormPrevious } from "react-icons/gr";
 
 
 export default function ActiveImage() {
@@ -92,16 +95,38 @@ export default function ActiveImage() {
               showOverview ? "flex gap-4 flex-col " : "hidden"
             } `}
           >
-            <TitleInfoPair title="Instruments"></TitleInfoPair>
-            {img.details.instruments.map((ins) => (
-              <TitleInfoPair text1={ins.instrument}></TitleInfoPair>
-            ))}
 
-              {/* RELEASE DATE  */}
+                {/* Instruments  */}
+                <Instruments Instruments={img.details.instruments}></Instruments>
+
+
+              {/* Observation ID  */}
               <TitleInfoPair
                 title="Observation Id"
                 text1={img.observation_id}
                 ></TitleInfoPair>
+
+                {/* Program  */}
+                <TitleInfoPair 
+                title="Program"
+                text1={img.program}
+                ></TitleInfoPair>
+
+                {/* MIssion  */}
+                <TitleInfoPair 
+                title="Mission"
+                text1={img.details.mission}
+                ></TitleInfoPair>
+
+                {/* PREV-NEXT */}
+                {/* <div className="flex gap-2 cursor-pointer items-center justify-center p-3 text-color1 text-xl md:text-4xl animate-pulse ">
+                    <Link onClick={handlePrev} href="/images">
+                        <GrFormPrevious></GrFormPrevious>
+                    </Link>
+                    
+                    <GrFormNext></GrFormNext>
+                </div> */}
+
             </div>
 
 
