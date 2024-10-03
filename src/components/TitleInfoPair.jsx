@@ -1,4 +1,5 @@
-export default function TitleInfoPair({ title, text1, text2, text3 }) {
+
+export default function TitleInfoPair({title,text1,text2,text3}) {
   return (
     <div className="flex flex-col gap-2">
       <h1 className="font-bold text-base xl:text-lg text-slate-400">{title}</h1>

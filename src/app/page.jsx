@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import HomePage from "@/components/HomePage";
-import imageStore from "@/store/store";
-import { Provider } from "react-redux";
+import HomePage from "@/components/HomePage"
+import imageStore from "@/store/store"
+import { Provider } from "react-redux"
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
         <HomePage></HomePage>
       </div>
     </Provider>
-  );
+  )
 }
