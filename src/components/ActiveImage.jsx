@@ -39,7 +39,7 @@ export default function ActiveImage() {
         <Link
           href={img.location}
           target="_blank"
-          className="rounded-xl bg-transparent w-[70%] max-md:w-full max-md:h-max h-full overflow-hidden relative "
+          className="rounded-xl bg-transparent w-[70%] max-md:w-full max-md:h-max h-full overflow-hidden relative hover:shadow-lg hover:shadow-blue-900 transition-all duration-500"
         >
           <div className="bg-gradient-to-r from-[#001c3d] to-[#071525] md:absolute max-md:rounded-2xl rounded-tl-xl rounded-br-2xl top-0 left-0 lg:w-max z-10 p-2">
             <div className="bg-black md:rounded-tl-2xl md:rounded-br-2xl max-md:rounded-2xl text-slate font-bold text-sm xl:text-base p-4">
@@ -60,17 +60,24 @@ export default function ActiveImage() {
           {/* right     */}
 
         <div
-          className={`rounded-xl w-[30%] max-md:w-full flex flex-col gap-4 p-4 bg-black md:hover:w-[40%] transition-all duration-500 text-slate-500 overflow-scroll no-scrollbar`}
+          className={`rounded-xl w-[30%] max-md:w-full flex flex-col gap-4 p-4 bg-black md:hover:w-[40%] transition-all duration-500 text-slate-500 overflow-scroll no-scrollbar hover:shadow-lg hover:shadow-blue-900 font-mono`}
         >
           <div className="flex self-center gap-4 xl:gap-6 flex-wrap text-sm lg;text-base font-sans">
             <div
               onClick={handleOverview}
-              className={`cursor-pointer text-2xl max-md:text-lg font-bold ${
+              className={`cursor-pointer text-2xl max-md:text-lg  font-bold ${
                 showOverview &&
-                " bg-gradient-to-r bg-clip-text from-[#0077f8] to-[#67adf1] text-transparent "
+                " bg-gradient-to-r bg-clip-text from-[#0077f8] to-[#67adf1] text-transparent flex gap-2"
               }`}
             >
-              Overview
+              <p className="font-normal">O</p>
+              V
+              <p className="font-normal">E</p>
+              R 
+              <p className="font-normal">V</p>
+              I
+              <p className="font-normal">E</p>
+              W
             </div>
             {/* <div onClick={handleFacts}
               className={`cursor-pointer ${showFacts && " bg-gradient-to-r bg-clip-text from-orange-400 via-yellow-600 to-yellow-200 text-transparent " }`}>Fast facts</div>
@@ -82,7 +89,7 @@ export default function ActiveImage() {
           {/* OVERVIEW  */}
           <div
             className={`${
-              showOverview ? "flex gap-4 flex-col italic" : "hidden"
+              showOverview ? "flex gap-4 flex-col " : "hidden"
             } `}
           >
             <TitleInfoPair title="Instruments"></TitleInfoPair>
