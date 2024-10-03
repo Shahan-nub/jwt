@@ -1,6 +1,7 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
 const activeImageSlice = createSlice({
+<<<<<<< HEAD
     name:"activeImage",
     initialState:[{
         "id": "jw02731001001_02105_00004_nrca1_cal.jpg",
@@ -38,6 +39,16 @@ const activeImageSlice = createSlice({
         },
     }
 })
+=======
+  name: "activeImage",
+  initialState: {},
+  reducers: {
+    addActiveImage: (store, action) => {
+      return action.payload;
+    },
+  },
+});
+>>>>>>> 1535f732f043342deb3208fa358f6ca9bdf616b6
 
 export const activeImageActions = activeImageSlice.actions;
 export default activeImageSlice;

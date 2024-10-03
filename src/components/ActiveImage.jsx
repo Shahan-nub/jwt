@@ -38,7 +38,11 @@ export default function ActiveImage() {
         <Link
           href={img.location}
           target="_blank"
+<<<<<<< HEAD
           className="rounded-xl bg-transparent w-[70%] max-md:w-full max-md:h-max h-full overflow-hidden relative hover:shadow-lg hover:shadow-[#0d2f69] transition-all duration-500"
+=======
+          className="rounded-xl bg-transparent w-[70%] max-md:w-full max-md:h-max h-full overflow-hidden relative "
+>>>>>>> 1535f732f043342deb3208fa358f6ca9bdf616b6
         >
           <div className="bg-gradient-to-r from-[#001c3d] to-[#071525] md:absolute max-md:rounded-2xl rounded-tl-xl rounded-br-2xl top-0 left-0 lg:w-max z-10 p-2">
             <div className="bg-black md:rounded-tl-2xl md:rounded-br-2xl max-md:rounded-2xl text-slate font-bold text-sm xl:text-base p-4">
@@ -59,16 +63,25 @@ export default function ActiveImage() {
         {/* right     */}
 
         <div
+<<<<<<< HEAD
           className={`rounded-xl w-[30%] max-md:w-full flex flex-col gap-4 p-4 bg-black md:hover:w-[40%] transition-all duration-500 text-slate-500 overflow-scroll no-scrollbar font-mono hover:shadow-lg hover:shadow-[#0d2f69]`}
+=======
+          className={`rounded-xl w-[30%] max-md:w-full flex flex-col gap-4 p-4 bg-black md:hover:w-[40%] transition-all duration-500 text-slate-500 overflow-scroll no-scrollbar`}
+>>>>>>> 1535f732f043342deb3208fa358f6ca9bdf616b6
         >
           <div className="flex self-center gap-4 xl:gap-6 flex-wrap text-sm lg;text-base font-sans">
             <div
               onClick={handleOverview}
+<<<<<<< HEAD
               className={`cursor-pointer text-xl max-md:text-lg flex gap-2 font-bold ${
+=======
+              className={`cursor-pointer text-2xl max-md:text-lg font-bold ${
+>>>>>>> 1535f732f043342deb3208fa358f6ca9bdf616b6
                 showOverview &&
                 " bg-gradient-to-r bg-clip-text from-[#0077f8] to-[#67adf1] text-transparent "
               }`}
             >
+<<<<<<< HEAD
               O 
               <p className="font-normal">V</p> 
               E 
@@ -77,6 +90,9 @@ export default function ActiveImage() {
               <p className="font-normal">I</p> 
               E 
               <p className="font-normal">W</p> 
+=======
+              Overview
+>>>>>>> 1535f732f043342deb3208fa358f6ca9bdf616b6
             </div>
             {/* <div onClick={handleFacts}
               className={`cursor-pointer ${showFacts && " bg-gradient-to-r bg-clip-text from-orange-400 via-yellow-600 to-yellow-200 text-transparent " }`}>Fast facts</div>
@@ -88,11 +104,16 @@ export default function ActiveImage() {
           {/* OVERVIEW  */}
           <div
             className={`${
+<<<<<<< HEAD
               showOverview ? "flex gap-4 flex-col" : "hidden"
+=======
+              showOverview ? "flex gap-4 flex-col italic" : "hidden"
+>>>>>>> 1535f732f043342deb3208fa358f6ca9bdf616b6
             } `}
           >
             <TitleInfoPair title="Instruments"></TitleInfoPair>
             {img.details.instruments.map((ins) => (
+<<<<<<< HEAD
               <TitleInfoPair key={ins.instrument} text1={ins.instrument}></TitleInfoPair>
             ))}
 
@@ -111,6 +132,18 @@ export default function ActiveImage() {
             ></TitleInfoPair>
           </div>
 
+=======
+              <TitleInfoPair text1={ins.instrument}></TitleInfoPair>
+            ))}
+
+            {/* RELEASE DATE  */}
+            <TitleInfoPair
+              title="Observation Id"
+              text1={img.observation_id}
+            ></TitleInfoPair>
+          </div>
+
+>>>>>>> 1535f732f043342deb3208fa358f6ca9bdf616b6
           {/* FACTS  */}
           {/* <div className={`${showFacts ? 'flex gap-4 flex-col' : 'hidden'} `}>
               <TitleInfoPair 
