@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import TitleInfoPair from "@/components/TitleInfoPair";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,9 +8,8 @@ import Instruments from "./Instruments";
 import { GrFormNext, GrNext } from "react-icons/gr";
 import { GrFormPrevious } from "react-icons/gr";
 
-
 export default function ActiveImage() {
-    const [showOverview, setShowOverview] = useState(true);
+  const [showOverview, setShowOverview] = useState(true);
   const [showFacts, setShowFacts] = useState(false);
   const [showData, setShowData] = useState(false);
 
@@ -60,7 +59,7 @@ export default function ActiveImage() {
           ></img>
         </Link>
 
-          {/* right     */}
+        {/* right     */}
 
         <div
           className={`rounded-xl w-[30%] max-md:w-full flex flex-col gap-4 p-4 bg-black md:hover:w-[40%] transition-all duration-500 text-slate-500 overflow-scroll no-scrollbar hover:shadow-lg hover:shadow-blue-900 font-mono`}
@@ -73,63 +72,47 @@ export default function ActiveImage() {
                 " bg-gradient-to-r bg-clip-text from-[#0077f8] to-[#67adf1] text-transparent flex gap-2"
               }`}
             >
-              <p className="font-normal">O</p>
-              V
-              <p className="font-normal">E</p>
-              R 
-              <p className="font-normal">V</p>
-              I
-              <p className="font-normal">E</p>
-              W
+              <p className="font-normal">O</p>V<p className="font-normal">E</p>R
+              <p className="font-normal">V</p>I<p className="font-normal">E</p>W
             </div>
             {/* <div onClick={handleFacts}
               className={`cursor-pointer ${showFacts && " bg-gradient-to-r bg-clip-text from-orange-400 via-yellow-600 to-yellow-200 text-transparent " }`}>Fast facts</div>
               <div onClick={handleData}
               className={`cursor-pointer ${showData && " bg-gradient-to-r bg-clip-text from-orange-400 via-yellow-600 to-yellow-200 text-transparent " }`}>Data</div> */}
-            </div>
-            <hr className="h-px" />
+          </div>
+          <hr className="h-px" />
 
           {/* OVERVIEW  */}
           <div
-            className={`${
-              showOverview ? "flex gap-4 flex-col " : "hidden"
-            } `}
+            className={`${showOverview ? "flex gap-4 flex-col " : "hidden"} `}
           >
+            {/* Instruments  */}
+            <Instruments Instruments={img.details.instruments}></Instruments>
 
-                {/* Instruments  */}
-                <Instruments Instruments={img.details.instruments}></Instruments>
+            {/* Observation ID  */}
+            <TitleInfoPair
+              title="Observation Id"
+              text1={img.observation_id}
+            ></TitleInfoPair>
 
+            {/* Program  */}
+            <TitleInfoPair title="Program" text1={img.program}></TitleInfoPair>
 
-              {/* Observation ID  */}
-              <TitleInfoPair
-                title="Observation Id"
-                text1={img.observation_id}
-                ></TitleInfoPair>
+            {/* MIssion  */}
+            <TitleInfoPair
+              title="Mission"
+              text1={img.details.mission}
+            ></TitleInfoPair>
 
-                {/* Program  */}
-                <TitleInfoPair 
-                title="Program"
-                text1={img.program}
-                ></TitleInfoPair>
-
-                {/* MIssion  */}
-                <TitleInfoPair 
-                title="Mission"
-                text1={img.details.mission}
-                ></TitleInfoPair>
-
-                {/* PREV-NEXT */}
-                {/* <div className="flex gap-2 cursor-pointer items-center justify-center p-3 text-color1 text-xl md:text-4xl animate-pulse ">
+            {/* PREV-NEXT */}
+            {/* <div className="flex gap-2 cursor-pointer items-center justify-center p-3 text-color1 text-xl md:text-4xl animate-pulse ">
                     <Link onClick={handlePrev} href="/images">
                         <GrFormPrevious></GrFormPrevious>
                     </Link>
                     
                     <GrFormNext></GrFormNext>
                 </div> */}
-
-            </div>
-
-
+          </div>
 
           {/* FACTS  */}
           {/* <div className={`${showFacts ? 'flex gap-4 flex-col' : 'hidden'} `}>
@@ -154,10 +137,9 @@ export default function ActiveImage() {
             ></TitleInfoPair>
             </div> */}
 
-            {/* DATA  */}
-
-          </div>
+          {/* DATA  */}
         </div>
       </div>
-  )
+    </div>
+  );
 }

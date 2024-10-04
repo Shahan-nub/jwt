@@ -10,15 +10,15 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        color1:"#1f74ff",
+        color1: "#1f74ff",
       },
-      animation:{
-        'infinite-rotate':'infinite-rotate 9s linear infinite',
+      animation: {
+        "infinite-rotate": "infinite-rotate 9s linear infinite",
       },
-      keyframes:{
-        'infinite-rotate':{
-          from:{transform:'rotate(0deg)'},
-          to:{transform:'rotate(360deg)'},
+      keyframes: {
+        "infinite-rotate": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
         },
       },
     },
