@@ -221,7 +221,7 @@ export default function HomePage2() {
           The James Webb Space Telescope is an ambitious scientific endeavor to
           answer these questions.
           <br></br> Webb builds on the legacy of previous space-based telescopes
-          to push the'<br></br> boundaries of human knowledge even further, to
+          to push the<br></br> boundaries of human knowledge even further, to
           the formation of the first galaxies and the horizons of other worlds.
           <br></br>
           <br></br>

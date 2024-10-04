@@ -50,13 +50,13 @@ export default function ActiveImage() {
               </div>
             </div>
           </div>
-          <img
+          <Image
             src={img.location}
             height={1500}
             width={1500}
             alt="pic1"
             className="overflow-hidden scale-105 bg-transparent rounded-xl"
-          ></img>
+          ></Image>
         </Link>
 
         {/* right     */}
