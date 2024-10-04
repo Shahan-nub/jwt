@@ -60,7 +60,7 @@ export default function Navbar() {
           <GiCompactDisc></GiCompactDisc>
         </div>
       </div>
-      <audio ref={songRef} autoPlay={true} loop src="/music/track.mp3"></audio>
+      <audio ref={songRef} autoPlay loop src="/media/track.mp3"></audio>
     </div>
   );
 }
