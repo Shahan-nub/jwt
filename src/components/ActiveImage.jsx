@@ -69,7 +69,7 @@ export default function ActiveImage() {
               onClick={handleOverview}
               className={`cursor-pointer text-2xl max-md:text-lg  font-bold ${
                 showOverview &&
-                " bg-gradient-to-r bg-clip-text from-[#0077f8] to-[#67adf1] text-transparent flex gap-2"
+                " bg-gradient-to-r bg-clip-text from-[#0077f8] to-[#67adf1] text-transparent flex gap-2 border-b border-white"
               }`}
             >
               <p className="font-normal">O</p>V<p className="font-normal">E</p>R
@@ -80,7 +80,6 @@ export default function ActiveImage() {
               <div onClick={handleData}
               className={`cursor-pointer ${showData && " bg-gradient-to-r bg-clip-text from-orange-400 via-yellow-600 to-yellow-200 text-transparent " }`}>Data</div> */}
           </div>
-          <hr className="h-px" />
 
           {/* OVERVIEW  */}
           <div
