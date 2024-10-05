@@ -11,6 +11,7 @@ function FlipCard({ card }) {
         >
           <div className="card front">
             <Image
+            alt="ih"
               className="absolute rounded-xl cardbg"
               src="https://jwst-api-cdn.nyc3.cdn.digitaloceanspaces.com/jwst--jw02731001001_02103_00001_nrcblong_cal.jpg"
             />
@@ -20,6 +21,7 @@ function FlipCard({ card }) {
           </div>
           <div className="card back cardmargin">
             <Image
+            alt="gygy"
               className="absolute rounded-xl fg cardbg"
               src="https://jwst-api-cdn.nyc3.cdn.digitaloceanspaces.com/jwst--jw02731001001_02103_00001_nrcblong_cal.jpg"
             />
