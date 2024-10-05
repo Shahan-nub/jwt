@@ -188,7 +188,7 @@ export default function HomePage() {
       <div>
         <div>
           <video
-            src="https://stsci-opo.org/STScI-01J4M80RCME4DP0R50MGW5MK5V.mp4"
+            src="/media/background.mp4"
             autoPlay
             loop
             className="-z-10 absolute max-md:w-fit max-md:h-screen  w-screen"

@@ -43,7 +43,7 @@ export default function ActiveImage() {
           target="_blank"
           className="rounded-xl bg-transparent w-[70%] max-md:w-full max-md:h-max h-full overflow-hidden relative hover:shadow-lg hover:shadow-blue-900 transition-all duration-500"
         >
-          <div className="bg-gradient-to-r from-[#001c3d] to-[#071525] md:absolute max-md:rounded-2xl rounded-tl-xl rounded-br-2xl top-0 left-0 lg:w-max z-10 p-2">
+          <div className="bg-gradient-to-br from-[#001c3d] to-[#071525] md:absolute max-md:rounded-2xl rounded-tl-xl rounded-br-2xl top-0 left-0 lg:w-max z-10 p-2">
             <div className="bg-black md:rounded-tl-2xl md:rounded-br-2xl max-md:rounded-2xl text-slate font-bold text-sm xl:text-base p-4">
               <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#0077f8] to-[#67adf1] text-center">
                 {img.details.description}
@@ -54,7 +54,7 @@ export default function ActiveImage() {
             src={img.location}
             height={1500}
             width={1500}
-            alt="pic1"
+            alt={img.id}
             className="overflow-hidden scale-105 bg-transparent rounded-xl"
           ></Image>
         </Link>
@@ -64,7 +64,7 @@ export default function ActiveImage() {
         <div
           className={`rounded-xl w-[30%] max-md:w-full flex flex-col gap-4 p-4 bg-black md:hover:w-[40%] transition-all duration-500 text-slate-500 overflow-scroll no-scrollbar hover:shadow-lg hover:shadow-blue-900 font-mono`}
         >
-          <div className="flex self-center gap-4 xl:gap-6 flex-wrap text-sm lg;text-base font-sans">
+          <div className="flex self-center gap-4 xl:gap-6 flex-wrap text-sm lg:text-base font-sans">
             <div
               onClick={handleOverview}
               className={`cursor-pointer text-2xl max-md:text-lg  font-bold ${
@@ -83,23 +83,28 @@ export default function ActiveImage() {
 
           {/* OVERVIEW  */}
           <div
-            className={`${showOverview ? "flex gap-4 flex-col " : "hidden"} `}
+            className={`${
+              showOverview ? "flex gap-6 flex-col " : "hidden"
+            } mt-3 text-wrap`}
           >
             {/* Instruments  */}
             <Instruments Instruments={img.details.instruments}></Instruments>
 
             {/* Observation ID  */}
             <TitleInfoPair
-              title="Observation Id"
+              title="🔍 Observation ID"
               text1={img.observation_id}
             ></TitleInfoPair>
 
             {/* Program  */}
-            <TitleInfoPair title="Program" text1={img.program}></TitleInfoPair>
+            <TitleInfoPair
+              title="🖥️ Program ID"
+              text1={img.program}
+            ></TitleInfoPair>
 
             {/* MIssion  */}
             <TitleInfoPair
-              title="Mission"
+              title="🚀 Mission"
               text1={img.details.mission}
             ></TitleInfoPair>
 

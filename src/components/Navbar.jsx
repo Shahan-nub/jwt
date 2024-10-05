@@ -10,7 +10,7 @@ import { useState, useRef } from "react";
 import { GiCompactDisc } from "react-icons/gi";
 
 export default function Navbar() {
-  const [play, setPlay] = useState(true);
+  const [play, setPlay] = useState(false);
   const songRef = useRef(null);
 
   const togglePlay = () => {
@@ -18,15 +18,28 @@ export default function Navbar() {
       songRef.current.pause();
     } else {
       songRef.current.play();
+      songRef.current.volume = 0.2;
     }
     setPlay(!play);
   };
 
   return (
-    <div className={`${usePathname() === "/" ? "z-50 md:w-0" : "md:min-w-[5%] md:h-screen md:pl-4 md:w-[5%]"}   relative flex items-center justify-center text-slate-400 rounded-xl max-h-max  py-6 max-sm:py-2`}>
-      <div className={`bg-black my-auto md:fixed top-1/2 
-        ${usePathname() === "/" ? "top-0 flex-row left-1/2 md:-translate-x-1/2 md:bg-transparent backdrop-blur-sm " : "md:-translate-y-1/2"}   
-        flex md:flex-col gap-4 md:gap-6 rounded-xl px-3 py-6 max-md:py-2 max-md:mt-4 text-2xl text-center`}>
+    <div
+      className={`${
+        usePathname() === "/"
+          ? "z-50 md:w-0"
+          : "md:min-w-[5%] md:h-screen md:pl-4 md:w-[5%]"
+      }   relative flex items-center justify-center text-slate-400 rounded-xl max-h-max  py-6 max-sm:py-2`}
+    >
+      <div
+        className={`bg-black my-auto md:fixed top-1/2 
+        ${
+          usePathname() === "/"
+            ? "top-0 flex-row left-1/2 md:-translate-x-1/2 md:bg-transparent backdrop-blur-sm "
+            : "md:-translate-y-1/2"
+        }   
+        flex md:flex-col gap-4 md:gap-6 rounded-xl px-3 py-6 max-md:py-2 max-md:mt-4 text-2xl text-center`}
+      >
         <Link
           href="/"
           className={`cursor-pointer 
@@ -62,7 +75,7 @@ export default function Navbar() {
           <GiCompactDisc></GiCompactDisc>
         </div>
       </div>
-      <audio ref={songRef} autoPlay loop src="/media/track.mp3"></audio>
+      <audio ref={songRef} loop src="/media/track.mp3"></audio>
     </div>
   );
 }
