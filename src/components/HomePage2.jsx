@@ -2,17 +2,22 @@
 import React, { useEffect, useState } from "react";
 import FlipCard from "./FlipCard";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { activeImageActions } from "@/store/slices/activeImageSlice";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/styles.scss";
 import Card from "./Card";
 import Link from "next/link";
 import Loader from "./Loader";
+import Glow from "./Glow";
+import { allImagesActions } from "@/store/slices/allImagesSlice";
+import { FaAngleDoubleDown, FaAngleDoubleUp, FaArrowDown } from "react-icons/fa";
 
 export default function HomePage2() {
   const [data, setData] = useState([]);
+  const [showAllImages, setShowAllImages] = useState(false);
   let images = [...data];
+  const dispatch = useDispatch();
 
   const fetchData = async () => {
     let config = {
@@ -32,6 +37,10 @@ export default function HomePage2() {
             (image.observation_id = image.observation_id.replaceAll("_", "-"))
         );
         setData(images);
+
+        dispatch(allImagesActions.addAllImages(data));
+
+        // console.log(data); //testing
       })
       .catch((error) => {
         console.log(error);
@@ -39,7 +48,7 @@ export default function HomePage2() {
   };
   fetchData();
 
-  const dispatch = useDispatch();
+  const dataFromStore = useSelector((store) => store.allImages);
 
   const handleImgClick = (id) => {
     const activeImg = data.filter((img) => img.id === id);
@@ -197,12 +206,12 @@ export default function HomePage2() {
             <div>
               <div className="flex items-center justify-center">
                 <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-lg font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 dark:text-white focus:ring-4 z-20 mt-16">
-                  <a
+                  <Link
                     href="#link"
                     className="relative font-bold text-black no-underline hover:text-black hover:scale-110 transition-all duration-500 px-5 py-2.5 max-md:px-1 max-md:py-1 max-md:text-sm bg-white rounded-md"
                   >
                     Image Gallery
-                  </a>
+                  </Link>
                 </button>
               </div>
             </div>
@@ -262,11 +271,15 @@ export default function HomePage2() {
         <h1 className="font-bold text-2xl md:text-4xl font-mono text-color1 my-10 lg:my-32 tracking-widest">
           IMAGE GALLERY
         </h1>
-        {data.length > 2 ? "" : <Loader></Loader>}
+        {data.length > 4 ? "" : <Loader></Loader>}
         <div
           id="link"
-          className="w-full flex flex-wrap justify-center gap-5 font-mono"
+          className={`w-full ${showAllImages ? "h-auto" : "h-screen"}  md:h-[100vh]  overflow-y-hidden flex flex-wrap justify-center gap-5 font-mono relative`}
         >
+          {showAllImages && <Glow pos="left-[15%] "></Glow>}
+          {showAllImages && <Glow pos="left-[70%] top-1/2 "></Glow>}
+          {showAllImages && <Glow pos="left-[20%] bottom-[15%]"></Glow>}
+
           {data.map((img) => {
             return (
               <Link
@@ -282,8 +295,17 @@ export default function HomePage2() {
             );
           })}
         </div>
+        {/* VIEW ALL IMGS  */}
+        <div
+          className={`flex flex-col items-center text-blue-600 font-mono text-xl font-thin animate-bounce cursor-pointer my-20 max-md:my-10`}
+          onClick={() => {setShowAllImages(!showAllImages)}}
+        >
+          <p>View {showAllImages ? "Less" : "More"}</p>
+          {showAllImages ? <FaAngleDoubleUp></FaAngleDoubleUp> : <FaAngleDoubleDown></FaAngleDoubleDown>}
+        </div>
 
-        <div className="w-full flex flex-col my-6 items-center justify-center">
+        <div className="w-full flex flex-col my-6 items-center justify-center relative">
+          <Glow pos="left-1/2 -translate-x-[50%] top-1/2"></Glow>
           <div className="flex w-full">
             <h1
               className="font-bold text-2xl md:text-4xl font-mono text-color1 my-10 lg:mt-32
@@ -331,7 +353,9 @@ export default function HomePage2() {
             </h1>
           </div>
 
-          <div className="flex flex-row flex-wrap gap-6 items-center justify-evenly text-center w-full mx-5 mb-20">
+          <div className="flex flex-row flex-wrap gap-6 items-center justify-evenly text-center w-full mx-5 mb-20 relative">
+            <Glow pos="left-1/4 -translate-x-[50%] "></Glow>
+            <Glow pos="left-3/4 -translate-x-[50%] -translate-y-[60%]"></Glow>
             <Link
               target="_blank"
               href="https://webbtelescope.org/quick-facts"

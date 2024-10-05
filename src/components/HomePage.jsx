@@ -228,7 +228,7 @@ export default function HomePage() {
             <h1>Revealing the Infrared Universe</h1>
           </u>
           <br></br>
-          We wonder. It’s our nature. How did we get here?<br></br>
+          We wonder. It&#39;s our nature. How did we get here?<br></br>
           Are we alone in the universe?<br></br>
           How does the universe work?<br></br>
           <br></br>
