@@ -12,7 +12,9 @@ export default function Card({ img }) {
         height={400}
         width={400}
       />
-      <p className="md:hidden my-4 text-slate-200 text-xs">{img.details.description}</p>
+      <p className="md:hidden my-4 text-slate-200 text-xs">
+        {img.details.description}
+      </p>
       <div className="absolute top-1/2 -translate-y-1/2 w-full h-full text-center text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex justify-center items-center px-2 group-hover:backdrop-blur">
         <p> {img.details.description}</p>
       </div>

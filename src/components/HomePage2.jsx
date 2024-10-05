@@ -255,25 +255,25 @@ export default function HomePage2() {
           </div>
         </div> */}
 
-        <h1 className="font-bold text-2xl md:text-4xl font-mono text-color1 my-10 lg:my-32" >
+        <h1 className="font-bold text-2xl md:text-4xl font-mono text-color1 my-10 lg:my-32">
           I M A G E S
         </h1>
         {data.length > 2 ? "" : <Loader></Loader>}
-        <div id="link" className="w-full flex flex-wrap justify-center gap-5 font-mono">
+        <div
+          id="link"
+          className="w-full flex flex-wrap justify-center gap-5 font-mono"
+        >
           {data.map((img) => {
             return (
               <Link
-              href="/images"
-              onClick={() => {
-                handleImgClick(img.id);
-              }}
-              className="basis-[20%] max-md:basis-[40%]"
+                href="/images"
+                onClick={() => {
+                  handleImgClick(img.id);
+                }}
+                className="basis-[20%] max-md:basis-[40%]"
                 key={img.id}
               >
-                <Card
-                  
-                  img={img}
-                ></Card>
+                <Card img={img}></Card>
               </Link>
             );
           })}

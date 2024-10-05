@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "JWT | Techlicious",
+  title: "JWST | Techlicious",
   description:
     "A website to display information about the James Webb Space Telescope",
 };
