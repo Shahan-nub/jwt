@@ -85,7 +85,7 @@ export default function ActiveImage() {
           <div
             className={`${
               showOverview ? "flex gap-6 flex-col " : "hidden"
-            } mt-3`}
+            } mt-3 text-wrap`}
           >
             {/* Instruments  */}
             <Instruments Instruments={img.details.instruments}></Instruments>

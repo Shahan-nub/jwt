@@ -27,6 +27,10 @@ export default function HomePage2() {
         images = response.data.body.filter((image) => {
           return !image.location.includes("_thumb");
         });
+        images.forEach(
+          (image) =>
+            (image.observation_id = image.observation_id.replaceAll("_", "-"))
+        );
         setData(images);
       })
       .catch((error) => {
@@ -184,7 +188,7 @@ export default function HomePage2() {
               </span>
               <br></br>
             </div>
-            <div className="flex text-center justify-center">
+            <div className="flex text-center justify-center mx-6">
               <span className="z-20 relative text-5xl max-md:text-3xl font-extrabold text-white">
                 WEBB SPACE TELESCOPE
               </span>
@@ -255,8 +259,8 @@ export default function HomePage2() {
           </div>
         </div> */}
 
-        <h1 className="font-bold text-2xl md:text-4xl font-mono text-color1 my-10 lg:my-32">
-          I M A G E S
+        <h1 className="font-bold text-2xl md:text-4xl font-mono text-color1 my-10 lg:my-32 tracking-widest">
+          IMAGE GALLERY
         </h1>
         {data.length > 2 ? "" : <Loader></Loader>}
         <div
@@ -277,6 +281,94 @@ export default function HomePage2() {
               </Link>
             );
           })}
+        </div>
+
+        <div className="w-full flex flex-col my-6 items-center justify-center">
+          <div className="flex w-full">
+            <h1
+              className="font-bold text-2xl md:text-4xl font-mono text-color1 my-10 lg:mt-32
+          lg:mb-20 tracking-widest w-full text-center"
+            >
+              WORKING MODEL
+            </h1>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-16 items-center justify-evenly text-center">
+            <div className="w-[100%] md:w-[50%] overflow-hidden rounded-2xl hover:scale-105 hover:shadow-lg hover:shadow-blue-900 transition-all duration-300 ease-linear md:ml-10">
+              <video
+                src="/media/model.mp4"
+                autoPlay
+                loop
+                muted
+                className="w-full object-cover"
+              ></video>
+            </div>
+            <div className="w-[100%] md:w-[50%] font-mono text-slate-300 md:mr-10">
+              This meticulously crafted 3D model of the James Webb Space
+              Telescope, created using Blender, showcases the cutting-edge
+              design of NASA's next-generation space observatory. <br />
+              <br />
+              The model highlights the JWST's iconic gold-plated hexagonal
+              mirrors, large sunshield, and its scientific instruments with
+              stunning accuracy.
+              <br />
+              <br />
+              Perfect for enthusiasts, educators, and space lovers, this model
+              brings the awe-inspiring structure of JWST to life in intricate
+              detail, reflecting its mission to explore the cosmos and uncover
+              the secrets of the universe.
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full flex flex-col my-6 items-center justify-center">
+          <div className="flex w-full">
+            <h1
+              className="font-bold text-2xl md:text-4xl font-mono text-color1 my-10 lg:mt-32
+          lg:mb-20 tracking-widest w-full text-center"
+            >
+              QUICK LINKS
+            </h1>
+          </div>
+
+          <div className="flex flex-row flex-wrap gap-6 items-center justify-evenly text-center w-full mx-5 mb-20">
+            <Link
+              target="_blank"
+              href="https://webbtelescope.org/quick-facts"
+              key="facts"
+            >
+              <div className="text-slate-300 font-mono text-lg p-2 min-w-[150px] max-w-[250px] bg-blue-900 border-2 border-slate-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-900 hover:bg-slate-300 hover:text-neutral-900 transition-all duration-200 rounded-xl font-bold">
+                <div className="w-full">FACTS</div>
+              </div>
+            </Link>
+            <Link
+              target="_blank"
+              href="https://webbtelescope.org/news/news-releases"
+              key="news"
+            >
+              <div className="text-slate-300 font-mono text-lg p-2 min-w-[150px] max-w-[250px] bg-blue-900 border-2 border-slate-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-900 hover:bg-slate-300 hover:text-neutral-900 transition-all duration-200 rounded-xl font-bold">
+                <div className="w-full">NEWS</div>
+              </div>
+            </Link>
+            <Link
+              target="_blank"
+              href="https://webbtelescope.org/resource-gallery/articles"
+              key="articles"
+            >
+              <div className="text-slate-300 font-mono text-lg p-2 min-w-[150px] max-w-[250px] bg-blue-900 border-2 border-slate-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-900 hover:bg-slate-300 hover:text-neutral-900 transition-all duration-200 rounded-xl font-bold">
+                <div className="w-full">ARTICLES</div>
+              </div>
+            </Link>
+            <Link
+              target="_blank"
+              href="https://webbtelescope.org/videos"
+              key="videos"
+            >
+              <div className="text-slate-300 font-mono text-lg p-2 min-w-[150px] max-w-[250px] bg-blue-900 border-2 border-slate-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-900 hover:bg-slate-300 hover:text-neutral-900 transition-all duration-200 rounded-xl font-bold">
+                <div className="w-full">VIDEOS</div>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+// require("dotenv/config");
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
