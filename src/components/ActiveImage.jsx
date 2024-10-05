@@ -109,13 +109,13 @@ export default function ActiveImage() {
             ></TitleInfoPair>
 
             {/* PREV-NEXT */}
-            <div className="flex gap-2 cursor-pointer items-center justify-center p-3 text-color1 text-xl md:text-4xl animate-pulse ">
+            {/* <div className="flex gap-2 cursor-pointer items-center justify-center p-3 text-color1 text-xl md:text-4xl animate-pulse ">
                     <Link onClick={handlePrev} href="/images">
                         <GrFormPrevious></GrFormPrevious>
                     </Link>
                     
                     <GrFormNext></GrFormNext>
-                </div>
+                </div> */}
           </div>
 
           {/* FACTS  */}
