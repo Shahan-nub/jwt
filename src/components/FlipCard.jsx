@@ -19,7 +19,7 @@ function FlipCard({ card }) {
             </div>
           </div>
           <div className="card back cardmargin">
-            <img
+            <Image
               className="absolute rounded-xl fg cardbg"
               src="https://jwst-api-cdn.nyc3.cdn.digitaloceanspaces.com/jwst--jw02731001001_02103_00001_nrcblong_cal.jpg"
             />
