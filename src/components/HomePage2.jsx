@@ -306,9 +306,9 @@ export default function HomePage2() {
             <div className="w-[100%] md:w-[50%] font-mono text-slate-300 md:mr-10">
               This meticulously crafted 3D model of the James Webb Space
               Telescope, created using Blender, showcases the cutting-edge
-              design of NASA's next-generation space observatory. <br />
+              design of NASA&#39;s next-generation space observatory. <br />
               <br />
-              The model highlights the JWST's iconic gold-plated hexagonal
+              The model highlights the JWST&#39;s iconic gold-plated hexagonal
               mirrors, large sunshield, and its scientific instruments with
               stunning accuracy.
               <br />

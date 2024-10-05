@@ -1,4 +1,5 @@
 import cn from "classnames";
+import Image from "next/image";
 function FlipCard({ card }) {
   return (
     <div className="flip-card-outer">
@@ -9,7 +10,7 @@ function FlipCard({ card }) {
           })} //added here cuz we need inner card
         >
           <div className="card front">
-            <img
+            <Image
               className="absolute rounded-xl cardbg"
               src="https://jwst-api-cdn.nyc3.cdn.digitaloceanspaces.com/jwst--jw02731001001_02103_00001_nrcblong_cal.jpg"
             />
