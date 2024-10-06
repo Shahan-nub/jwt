@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "JWST | Techlicious",
+  title: "Celestial Echoes",
   description:
     "A website to display information about the James Webb Space Telescope",
 };
