@@ -23,7 +23,7 @@ export default function HomePage2() {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "https://api.jwstapi.com/all/type/jpg?page=1&perPage=30",
+      url: "https://api.jwstapi.com/all/type/jpg?page=1&perPage=50",
       headers: { "X-API-KEY": "e33bc7e8-2249-4e67-bea0-59e3b02373bc" },
     };
 
