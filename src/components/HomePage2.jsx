@@ -220,13 +220,14 @@ export default function HomePage2() {
       </div>
 
       <div className="text-center my-5 px-4 w-full">
-        <div className="text-slate-300 my-6 font-mono">
+        <div className="text-slate-300 my-6 font-mono md:px-10 px-4">
           <u>
             <h1 className="font-bold text-white">
-            Unveiling the Cosmos: A Glimpse into the Infinite
+            Unveiling the Cosmos: <br /> A Glimpse into the Infinite
             </h1>
           </u>
           <br></br>
+          <br /> <br />
           Beyond the familiar confines of our planet Earth lies a vast and mysterious universe, teeming with celestial wonders.<br></br>
           The James Webb Space Telescope &#39;JWST&#39;, a groundbreaking astronomical observatory launched in 2021, is revolutionizing our understanding of the universe.<br></br>
           From the shimmering stars that dot the night sky to the distant galaxies that stretch across billions of light-years, the cosmos offers a breathtaking spectacle of cosmic beauty and grandeur.<br></br>
