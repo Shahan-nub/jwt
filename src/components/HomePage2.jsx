@@ -223,22 +223,16 @@ export default function HomePage2() {
         <div className="text-slate-300 my-6 font-mono">
           <u>
             <h1 className="font-bold text-white">
-              Revealing the Infrared Universe
+            Unveiling the Cosmos: A Glimpse into the Infinite
             </h1>
           </u>
           <br></br>
-          We wonder. It&#39;s our nature. How did we get here?<br></br>
-          Are we alone in the universe?<br></br>
-          How does the universe work?<br></br>
+          Beyond the familiar confines of our planet Earth lies a vast and mysterious universe, teeming with celestial wonders.<br></br>
+          The James Webb Space Telescope &#39;JWST&#39;, a groundbreaking astronomical observatory launched in 2021, is revolutionizing our understanding of the universe.<br></br>
+          From the shimmering stars that dot the night sky to the distant galaxies that stretch across billions of light-years, the cosmos offers a breathtaking spectacle of cosmic beauty and grandeur.<br></br>
           <br></br>
-          The James Webb Space Telescope is an ambitious scientific endeavor to
-          answer these questions.
-          <br></br> Webb builds on the legacy of previous space-based telescopes
-          to push the<br></br> boundaries of human knowledge even further, to
-          the formation of the first galaxies and the horizons of other worlds.
+          As the JWST continues to explore the cosmos, we can expect to uncover even more astonishing discoveries and deepen our understanding of the universe&#39;s mysteries. 
           <br></br>
-          <br></br>
-          Explore the universe with Webb.
         </div>
 
         {/* CARDS  */}
